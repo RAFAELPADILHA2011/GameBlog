@@ -1,0 +1,206 @@
+:root {
+    
+    --default-cl: white;
+    --bg-body: rgb(15, 27, 39);
+    --bg-top-bar: rgb(20, 0, 9);
+    --cl-logo: rgb(215, 251, 255);
+    --sh-logo: rgb(255, 123, 198);
+    --cl-utilities: rgb(162, 225, 249);
+    --effect-bar: white;
+    --after-ef-bar: rgb(91, 253, 247);
+    --text-sh-utilities: rgb(99, 252, 247);
+    --clare-dark-btn: rgb(183, 228, 252);
+    --container-cl1: rgb(39, 15, 27);
+    --container-cl2: rgb(55, 0, 24);
+    --ctn-before1: rgba(255, 0, 149, 0.2);
+    --cnt-before2: rgba(30, 15, 24, 0);
+    --h-sh: rgba(0, 0, 0, 0.498);
+    --subtitles-cl: rgb(213, 211, 211);
+}
+
+.clare-mode {
+    --default-cl: rgb(23, 17, 48);
+    --bg-body: rgb(255, 255, 255);
+    --bg-top-bar: rgb(255, 255, 255);
+    --cl-logo: rgb(1, 192, 255);
+    --sh-logo: rgb(242, 240, 255);
+    --cl-utilities: rgb(113, 120, 194);
+    --effect-bar: rgb(0, 81, 195);
+    --after-ef-bar: rgb(0, 242, 255);
+    --text-sh-utilities: rgb(0, 204, 255);
+    --clare-dark-btn: rgb(33, 37, 39);
+    --container-cl1: rgb(230, 230, 230);
+    --container-cl2: rgb(159, 155, 200);
+    --ctn-before1: rgba(0, 157, 255, 0.2);
+    --cnt-before2: rgba(18, 15, 30, 0.0);
+    --h-sh: rgba(19, 15, 29, 0.2);
+    --subtitles-cl: rgb(23, 19, 37);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  "Zen Dots", sans-serif;
+    list-style: none;
+}
+
+body {
+    background: var(--bg-body);
+    color: var(--default-cl);
+    text-size-adjust: 16;
+    overflow: hidden;
+    transition: background 1s, color 1s;
+ }
+
+.top-bar {
+    background-color: var(--bg-top-bar);
+    width: 100%;
+    height: 5rem;
+    transition: background-color .5s;
+}
+
+header {
+    position: fixed;
+    width: 95vw;
+    top: 0;
+    padding: 1.25rem 3.125rem;
+    display: flex;
+    z-index: 3;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: "Archivo Black", sans-serif;
+    font-style: italic;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--cl-logo);
+    text-shadow: 0 0 1.25rem var(--sh-logo);
+    user-select: none;
+    transition: color 1s, text-shadow 1s;
+} 
+
+header nav ul {
+    font-size: 1.2rem;
+    text-shadow: 0 0 0.25rem var(--cl-utilities);
+    display: flex;
+    gap: 2.5rem;
+    user-select: none;
+    transition: text-shadow 1s;
+}
+
+header nav ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 0.3125rem 0;
+    scale: 1;
+    transition: scale 0.5s ease;
+}
+
+header nav ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0.1rem;
+    background-color: var(--default-cl);
+    transition: width 0.5s ease, background-color 1s ease, font-size 0.5s ease-in;
+}
+
+header nav ul li:hover::after {
+    width: 100%;
+    background-color: var(--after-ef-bar);
+}
+
+header nav ul li:hover {
+   scale: 1.1;
+   text-shadow: 0 0 1.25rem var(--text-sh-utilities);
+}
+
+.lamp {
+    display: flex;
+    gap: 2.5rem;
+    user-select: none;
+}
+
+.lamp::after {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.toggle-mode-btn {
+    background: none;
+    border: none;
+    padding: none;
+    cursor: pointer;
+}
+
+.toggle-mode-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--clare-dark-btn);
+    transition: fill 1s;
+}
+
+.toggle-mode-btn:hover svg {
+    fill: var(--default-cl);
+    transform: fill 1s;
+    
+}
+
+.container {
+    height: 100dvh;
+    position: relative;
+    background: linear-gradient(135deg, var(--container-cl1) 0%, var(--container-cl2) 100%);
+    overflow: hidden;
+    transition: background 1s;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--ctn-before1) 0%, var(--cnt-before2) 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    filter: blur(50px);
+    z-index: 1;
+    animation: pulse 5s infinite alternate;
+    transition: background 1s;
+}   
+
+@keyframes pulse {
+    0% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%, scale(0.5));
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%, scale(1.3));
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-shadow: 5px 5px 4px var(--h-sh);
+    padding-left: 2rem;
+    transition: text-shadow 1s;
+}
+
+h1 {
+    padding-top: 5rem;
+    line-height: 1.1;
+    margin: 0;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+h2, h3, h4, h5, h6 {
+    color: var(--subtitles-cl);
+    transition: color 1s;
+}
