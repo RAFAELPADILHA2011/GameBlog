@@ -20,7 +20,7 @@
 
 .clare-mode {
     --default-cl: rgb(23, 17, 48);
-    --bg-body: rgb(255, 255, 255);
+    --bg-body: #aee0ff;
     --bg-top-bar: rgb(255, 255, 255);
     --cl-logo: rgb(1, 192, 255);
     --sh-logo: rgb(242, 240, 255);
@@ -29,7 +29,7 @@
     --after-ef-bar: rgb(0, 242, 255);
     --text-sh-utilities: rgb(0, 204, 255);
     --clare-dark-btn: rgb(33, 37, 39);
-    --container-cl1: rgb(230, 230, 230);
+    --container-cl1: rgb(200, 235, 255);
     --container-cl2: rgb(159, 155, 200);
     --ctn-before1: rgba(0, 157, 255, 0.2);
     --cnt-before2: rgba(18, 15, 30, 0.0);
@@ -49,20 +49,15 @@ body {
     background: var(--bg-body);
     color: var(--default-cl);
     text-size-adjust: 16;
-    overflow: hidden;
+    overflow: auto;
     transition: background 1s, color 1s;
  }
 
-.top-bar {
-    background-color: var(--bg-top-bar);
-    width: 100%;
-    height: 5rem;
-    transition: background-color .5s;
-}
-
 header {
+    background: var(--bg-top-bar);
+    transition: background-color .5s;
     position: fixed;
-    width: 95vw;
+    width: 100%;
     top: 0;
     padding: 1.25rem 3.125rem;
     display: flex;
@@ -195,7 +190,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     padding-top: 5rem;
-    line-height: 1.1;
+    line-height: 4rem;
     margin: 0;
     font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
@@ -203,4 +198,20 @@ h1 {
 h2, h3, h4, h5, h6 {
     color: var(--subtitles-cl);
     transition: color 1s;
+}
+
+footer {
+    background-color: var(--bg-top-bar);
+    height: 10vh;
+    padding: 1.25rem 3.125rem;
+    display: flex;
+    align-items: center;
+    
+}
+
+footer p {
+    font-size: 1.25rem;
+    color: var(--subtitles-cl);
+    text-shadow: 0 0 1.0.1rem var(--cl-logo);
+    justify-content: space-between;
 }
