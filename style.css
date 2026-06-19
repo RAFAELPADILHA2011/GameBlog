@@ -19,22 +19,22 @@
 }
 
 .clare-mode {
-    --default-cl: rgb(23, 17, 48);
+    --default-cl: rgb(255, 255, 255);
     --bg-body: #aee0ff;
-    --bg-top-bar: rgb(255, 255, 255);
-    --cl-logo: rgb(1, 192, 255);
+    --bg-top-bar: rgb(41, 98, 231);
+    --cl-logo: rgb(165, 227, 248);
     --sh-logo: rgb(242, 240, 255);
     --cl-utilities: rgb(113, 120, 194);
     --effect-bar: rgb(0, 81, 195);
     --after-ef-bar: rgb(0, 242, 255);
     --text-sh-utilities: rgb(0, 204, 255);
-    --clare-dark-btn: rgb(33, 37, 39);
+    --clare-dark-btn: rgb(255, 255, 255);
     --container-cl1: rgb(200, 235, 255);
     --container-cl2: rgb(159, 155, 200);
-    --ctn-before1: rgba(0, 157, 255, 0.2);
+    --ctn-before1: rgba(255, 255, 255, 0.2)
     --cnt-before2: rgba(18, 15, 30, 0.0);
     --h-sh: rgba(19, 15, 29, 0.2);
-    --subtitles-cl: rgb(23, 19, 37);
+    --subtitles-cl: rgb(249, 241, 255);
 }
 
 * {
@@ -65,17 +65,6 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
-.logo {
-    font-family: "Archivo Black", sans-serif;
-    font-style: italic;
-    font-size: 2rem;
-    font-weight: 900;
-    color: var(--cl-logo);
-    text-shadow: 0 0 1.25rem var(--sh-logo);
-    user-select: none;
-    transition: color 1s, text-shadow 1s;
-} 
 
 header nav ul {
     font-size: 1.2rem;
@@ -114,6 +103,17 @@ header nav ul li:hover {
    scale: 1.1;
    text-shadow: 0 0 1.25rem var(--text-sh-utilities);
 }
+
+.logo {
+    font-family: "Archivo Black", sans-serif;
+    font-style: italic;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--cl-logo);
+    text-shadow: 0 0 1.25rem var(--sh-logo);
+    user-select: none;
+    transition: color 1s, text-shadow 1s;
+} 
 
 .lamp {
     display: flex;
@@ -201,17 +201,20 @@ h2, h3, h4, h5, h6 {
 }
 
 footer {
+    top : 0;
     background-color: var(--bg-top-bar);
-    height: 10vh;
+    height: 7.5vh;
     padding: 1.25rem 3.125rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     
 }
 
-footer p {
+footer nav ul {
     font-size: 1.25rem;
     color: var(--subtitles-cl);
+    gap : 50rem;
+    display : flex;
     text-shadow: 0 0 1.0.1rem var(--cl-logo);
-    justify-content: space-between;
 }
