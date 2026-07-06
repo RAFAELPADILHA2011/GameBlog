@@ -16,12 +16,13 @@
     --cnt-before2: rgba(30, 15, 24, 0);
     --h-sh: rgba(0, 0, 0, 0.498);
     --subtitles-cl: rgb(213, 211, 211);
+    --footer-txt-color: rgb(213, 211, 211);
 }
 
 .clare-mode {
     --default-cl: rgb(255, 255, 255);
     --bg-body: #aee0ff;
-    --bg-top-bar: rgb(41, 98, 231);
+    --bg-top-bar: rgb(36, 57, 107);
     --cl-logo: rgb(165, 227, 248);
     --sh-logo: rgb(242, 240, 255);
     --cl-utilities: rgb(113, 120, 194);
@@ -33,8 +34,7 @@
     --container-cl2: rgb(159, 155, 200);
     --ctn-before1: rgba(255, 255, 255, 0.2)
     --cnt-before2: rgba(18, 15, 30, 0.0);
-    --h-sh: rgba(19, 15, 29, 0.2);
-    --subtitles-cl: rgb(249, 241, 255);
+    --subtitles-cl: rgb(23, 34, 59);
 }
 
 * {
@@ -208,13 +208,17 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: background-color 0.5s;
     
 }
 
 footer nav ul {
     font-size: 1.25rem;
-    color: var(--subtitles-cl);
+    color: var(--footer-txt-color);
     gap : 50rem;
+    left: 3.125rem;
     display : flex;
+    align-items: center;
+    justify-content: space-between;
     text-shadow: 0 0 1.0.1rem var(--cl-logo);
 }
