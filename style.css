@@ -234,11 +234,7 @@ footer {
 
 footer nav ul {
     font-size: 1.25rem;
-<<<<<<< HEAD
     color: var(--default-cl);
-=======
-    color: var(--footer-txt-color);
->>>>>>> 605eb515835a0c9ecd6ece3935a14dab4463a358
     gap : 50rem;
     left: 3.125rem;
     display : flex;
