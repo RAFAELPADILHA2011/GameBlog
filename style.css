@@ -13,15 +13,17 @@
     --container-cl1: rgb(39, 15, 27);
     --container-cl2: rgb(55, 0, 24);
     --ctn-before1: rgba(255, 0, 149, 0.2);
-    --cnt-before2: rgba(30, 15, 24, 0);
+    --ctn-before2: rgba(30, 15, 24, 0);
     --h-sh: rgba(0, 0, 0, 0.498);
     --subtitles-cl: rgb(213, 211, 211);
+    --cl-h: white;
+    --alpha: 0.4;
 }
 
 .clare-mode {
     --default-cl: rgb(255, 255, 255);
     --bg-body: #aee0ff;
-    --bg-top-bar: rgb(41, 98, 231);
+    --bg-top-bar: rgb(23, 53, 124);
     --cl-logo: rgb(165, 227, 248);
     --sh-logo: rgb(242, 240, 255);
     --cl-utilities: rgb(113, 120, 194);
@@ -29,12 +31,14 @@
     --after-ef-bar: rgb(0, 242, 255);
     --text-sh-utilities: rgb(0, 204, 255);
     --clare-dark-btn: rgb(255, 255, 255);
-    --container-cl1: rgb(200, 235, 255);
-    --container-cl2: rgb(159, 155, 200);
+    --container-cl1: rgb(229, 242, 249);
+    --container-cl2: rgb(186, 185, 203);
     --ctn-before1: rgba(255, 255, 255, 0.2)
-    --cnt-before2: rgba(18, 15, 30, 0.0);
-    --h-sh: rgba(19, 15, 29, 0.2);
-    --subtitles-cl: rgb(249, 241, 255);
+    --ctn-before2: rgba(18, 15, 30, 0.0);
+    --h-sh: rgba(0, 0, 0, 0.321);
+    --subtitles-cl: rgb(60, 30, 83);
+    --cl-h: var(--subtitles-cl);
+    --alpha: 0.2;
 }
 
 * {
@@ -161,7 +165,7 @@ header nav ul li:hover {
     width: 500px;
     height: 500px;
     border-radius: 50%;
-    background: radial-gradient(circle, var(--ctn-before1) 0%, var(--cnt-before2) 70%);
+    background: radial-gradient(circle, var(--ctn-before1) 0%, var(--ctn-before2) 70%);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -60%);
@@ -184,11 +188,14 @@ header nav ul li:hover {
 
 h1, h2, h3, h4, h5, h6 {
     text-shadow: 5px 5px 4px var(--h-sh);
+    z-index: 3;
     padding-left: 2rem;
     transition: text-shadow 1s;
 }
 
 h1 {
+    color : var(--cl-h);
+    transition: color 0.5s;
     padding-top: 5rem;
     line-height: 4rem;
     margin: 0;
@@ -197,7 +204,20 @@ h1 {
 
 h2, h3, h4, h5, h6 {
     color: var(--subtitles-cl);
-    transition: color 1s;
+    position: absolute;
+    transition: color 0.5s;
+}
+
+.controle-background img {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; 
+    right: 0;
+    bottom: 0;
+    transform: rotate(-25deg);
+    mix-blend-mode: multiply;
+    opacity: var(--alpha);
 }
 
 footer {
@@ -213,7 +233,7 @@ footer {
 
 footer nav ul {
     font-size: 1.25rem;
-    color: var(--subtitles-cl);
+    color: var(--default-cl);
     gap : 50rem;
     display : flex;
     text-shadow: 0 0 1.0.1rem var(--cl-logo);

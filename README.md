@@ -1,11 +1,16 @@
 # GameBlog
 
-> Está página web tem como propósito, *mostrar* e *informar* sobre a história dos jogos, desde de **inserir data depois** até os tempos atuais.
+Está página web tem como propósito, *mostrar* e *informar* sobre a história dos jogos, desde de **1972** até os **tempos atuais**.
 
+> Essa página usa um sistema de cards em cada notícia é armazenada, como mostra a imagem abaixo:
 
---Mais detalhes sobre essa página (adicionar depois, né amigão)--
+> --Mais detalhes sobre essa página (adicionar depois, né amigão)--
 
 # Atualizações
+
+* 0.0.2:
+  * imagem de controle no fundo da página;
+  * adição de um rodapé a página que mostra a ultima atualização.
 
 * 0.0.1:
   * base da página web;
